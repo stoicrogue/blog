@@ -9,7 +9,7 @@ Have you ever performed a `git rebase` and realized you made a huge mistake?  Ha
 
 Luckily, you can recover from those situations using the `git reflog`.  
 
-> [!info] git-reflog
+> **git-reflog**
 > 
 > This command manages the information recorded in the reflogs.
 > 
@@ -90,7 +90,7 @@ In the snippet above we:
 
 Hope this saves you some grief in the future.  I know it has saved me many times.
 
-> [!tip] Closing Thoughts...
+> **Closing Thoughts...**
 > Remember, creating branches in Git is effectively free.  
 > 
 > When in doubt, make a new branch to experiment with.  
