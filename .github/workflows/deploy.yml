@@ -1,0 +1,48 @@
+name: Deploy Hugo Site to DreamHost
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        submodules: true  # Fetch Hugo themes if using git submodules
+        fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+        extended: true  # Set to false if you don't need Hugo extended
+
+    - name: Build Hugo site
+      run: hugo --minify
+
+    - name: Setup SSH
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.DREAMHOST_SSH_KEY }}" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        chmod 700 ~/.ssh
+        ssh-keyscan -H ${{ secrets.DREAMHOST_HOST }} >> ~/.ssh/known_hosts
+        
+        # Test the SSH connection
+        ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no -o ConnectTimeout=10 \
+          ${{ secrets.DREAMHOST_USER }}@${{ secrets.DREAMHOST_HOST }} "echo 'SSH connection successful'"
+
+    - name: Deploy to DreamHost
+      run: |
+        rsync -avz --delete \
+          -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" \
+          public/ \
+          ${{ secrets.DREAMHOST_USER }}@${{ secrets.DREAMHOST_HOST }}:${{ secrets.DREAMHOST_PATH }}
+
+    - name: Cleanup
+      run: rm -f ~/.ssh/id_ed25519
