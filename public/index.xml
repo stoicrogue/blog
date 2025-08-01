@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zennotes</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on Zennotes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>zenman@zennotes.net (Mark Molea)</managingEditor>
+    <webMaster>zenman@zennotes.net (Mark Molea)</webMaster>
+    <copyright>&amp;copy; Mark Molea 2025</copyright>
+    <lastBuildDate>Fri, 01 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Photography Portfolio</title>
+      <link>//localhost:1313/permanent/photos/</link>
+      <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
+      <author>zenman@zennotes.net (Mark Molea)</author>
+      <guid>//localhost:1313/permanent/photos/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>//localhost:1313/permanent/resume/</link>
+      <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
+      <author>zenman@zennotes.net (Mark Molea)</author>
+      <guid>//localhost:1313/permanent/resume/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Check your physical needs when you&#39;re mentally spiraling</title>
+      <link>//localhost:1313/posts/check-your-physical-needs/</link>
+      <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
+      <author>zenman@zennotes.net (Mark Molea)</author>
+      <guid>//localhost:1313/posts/check-your-physical-needs/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>git reflog might save you</title>
+      <link>//localhost:1313/posts/git-reflog-might-save-you/</link>
+      <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
+      <author>zenman@zennotes.net (Mark Molea)</author>
+      <guid>//localhost:1313/posts/git-reflog-might-save-you/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>What I Wish I Knew About Management Beforehand</title>
+      <link>//localhost:1313/posts/what-i-wish-i-knew-about-management-beforehand/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      <author>zenman@zennotes.net (Mark Molea)</author>
+      <guid>//localhost:1313/posts/what-i-wish-i-knew-about-management-beforehand/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
